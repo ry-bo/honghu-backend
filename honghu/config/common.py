@@ -150,7 +150,7 @@ class Common(Configuration):
             'console': {
                 'level': 'DEBUG',
                 'class': 'logging.StreamHandler',
-                'formatter': 'simple'
+                'formatter': 'verbose'
             },
             'mail_admins': {
                 'level': 'ERROR',
@@ -176,6 +176,10 @@ class Common(Configuration):
                 'handlers': ['console'],
                 'level': 'INFO'
             },
+            'honghu': {
+                'handlers': ['console'],
+                'level': 'DEBUG'
+            }
         }
     }
 
@@ -199,3 +203,5 @@ class Common(Configuration):
             'rest_framework.authentication.TokenAuthentication',
         )
     }
+    MP_APPID = os.getenv('MP_APPID', 'wxfc72120527289801')
+    MP_SECRET = os.getenv('MP_SECRET', '')
