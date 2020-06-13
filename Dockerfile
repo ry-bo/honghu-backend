@@ -2,7 +2,8 @@ FROM python:3.8
 ENV PYTHONUNBUFFERED 1
 
 # Allows docker to cache installed dependencies between builds
-COPY ./requirements.txt requirements.txt
+COPY ./requirements-base.txt requirements-base.txt
+COPY ./requirements-dev.txt requirements.txt
 RUN pip install -r requirements.txt -i https://pypi.tuna.tsinghua.edu.cn/simple
 
 # Adds our application code to the image
