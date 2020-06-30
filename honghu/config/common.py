@@ -16,17 +16,22 @@ class Common(Configuration):
         'django.contrib.sessions',
         'django.contrib.messages',
         'django.contrib.staticfiles',
+        'django.contrib.sites',
+        'django.contrib.sitemaps',
 
 
         # Third party apps
         'rest_framework',            # utilities for rest apis
         'rest_framework.authtoken',  # token authentication
         'django_filters',            # for filtering rest endpoints
+        'photologue',
+        'sortedm2m',
 
         # Your apps
         'honghu.users',
 
     )
+    SITE_ID = 1
 
     # https://docs.djangoproject.com/en/2.0/topics/http/middleware/
     MIDDLEWARE = (
