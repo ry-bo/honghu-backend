@@ -48,6 +48,7 @@ class Common(Configuration):
     ROOT_URLCONF = 'honghu.urls'
     SECRET_KEY = os.getenv('DJANGO_SECRET_KEY')
     WSGI_APPLICATION = 'honghu.wsgi.application'
+    SECURE_PROXY_SSL_HEADER = ('HTTP_PROTO', 'https')
 
     # Email
     EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
@@ -87,7 +88,7 @@ class Common(Configuration):
 
     # Media files
     MEDIA_ROOT = join(os.path.dirname(BASE_DIR), 'media')
-    MEDIA_URL = '/media/'
+    MEDIA_URL = 'https://service-2olziced-1253439746.ap-shanghai.apigateway.myqcloud.com/media/'
 
     TEMPLATES = [
         {
