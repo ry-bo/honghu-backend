@@ -88,7 +88,7 @@ class Common(Configuration):
 
     # Media files
     MEDIA_ROOT = join(os.path.dirname(BASE_DIR), 'media')
-    MEDIA_URL = 'https://service-2olziced-1253439746.ap-shanghai.apigateway.myqcloud.com/media/'
+    MEDIA_URL = '/media/'
 
     TEMPLATES = [
         {
