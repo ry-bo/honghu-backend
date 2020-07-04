@@ -14,7 +14,7 @@ class NewPicsAPIView(generics.ListAPIView):
 
 class RecommandPicsAPIView(generics.ListAPIView):
     ''''''
-    queryset = Photo.objects.all()
+    queryset = Photo.objects.order_by('?')[:100]
     serializer_class = PicsSerializer
     permission_classes = [AllowAny, ]
 
