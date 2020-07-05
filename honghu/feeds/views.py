@@ -44,3 +44,11 @@ class PicDetailAPIView(generics.RetrieveAPIView):
         object = super().get_object()
         object.increment_count()
         return object
+
+
+class PicAPIView(generics.CreateAPIView):
+    '''添加图片接口'''
+    serializer_class = PicSerializer
+    permission_classes = [
+        AllowAny,
+    ]
