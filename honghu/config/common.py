@@ -67,8 +67,8 @@ class Common(Configuration):
 
     # General
     APPEND_SLASH = False
-    TIME_ZONE = 'UTC'
-    LANGUAGE_CODE = 'en-us'
+    TIME_ZONE = 'Asia/Shanghai' 
+    LANGUAGE_CODE = 'zh-hans'
     # If you set this to False, Django will make some optimizations so as not
     # to load the internationalization machinery.
     USE_I18N = False
@@ -200,7 +200,7 @@ class Common(Configuration):
     REST_FRAMEWORK = {
         'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
         'PAGE_SIZE': int(os.getenv('DJANGO_PAGINATION_LIMIT', 10)),
-        'DATETIME_FORMAT': '%Y-%m-%dT%H:%M:%S%z',
+        'DATETIME_FORMAT': '%Y-%m-%d %H:%M:%S',
         'DEFAULT_RENDERER_CLASSES': (
             'rest_framework.renderers.JSONRenderer',
             'rest_framework.renderers.BrowsableAPIRenderer',
